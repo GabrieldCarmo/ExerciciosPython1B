@@ -2,27 +2,21 @@ i = 0
 c = 0
 nota = 0
 soma = 0
-maior = 1
-menor = 1
+maior = 0
+menor = 0
 
-
-if nota != -1:
-    while i != -1:
-        i = float(input("Digite a nota do aluno: "))
-    
-        if i > maior:
-            maior = nota
-        elif i < menor:
-            menor = nota
-
+while i != -1:
+    i = float(input("Digite a nota do aluno: "))
+    if i > maior:
+        maior = i
+    elif i < menor:
+        menor = i
+    soma += i
         
-        soma += nota
+    c+=1
         
-        c+=1
-        
-        media = soma/c
-            
-    print ("MAIOR: {}\n"
-           "MENOR: {}\n"
-           "MÉDIA: {}".format(maior,menor,media))
+    media = soma/c            
+print ("MAIOR: {}\n"
+       "MENOR: {}\n"
+       "MÉDIA: {:.2f}".format(maior,menor,media))
         
